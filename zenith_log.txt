@@ -1,0 +1,120 @@
+ERROR:    Error loading ASGI app. Could not import module "services.orchestrator.server".
+ERROR:    Error loading ASGI app. Could not import module "ai.rag.server".
+ERROR:    Error loading ASGI app. Could not import module "connectors.api.connector_api".
+Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\prude\OneDrive\Área de Trabalho\Zenith V1\venv\Lib\site-packages\uvicorn\__main__.py", line 4, in <module>
+    uvicorn.main()
+  File "C:\Users\prude\OneDrive\Área de Trabalho\Zenith V1\venv\Lib\site-packages\click\core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\prude\OneDrive\Área de Trabalho\Zenith V1\venv\Lib\site-packages\click\core.py", line 1082, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "C:\Users\prude\OneDrive\Área de Trabalho\Zenith V1\venv\Lib\site-packages\click\core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\prude\OneDrive\Área de Trabalho\Zenith V1\venv\Lib\site-packages\click\core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\prude\OneDrive\Área de Trabalho\Zenith V1\venv\Lib\site-packages\uvicorn\main.py", line 413, in main
+    run(
+  File "C:\Users\prude\OneDrive\Área de Trabalho\Zenith V1\venv\Lib\site-packages\uvicorn\main.py", line 580, in run
+    server.run()
+  File "C:\Users\prude\OneDrive\Área de Trabalho\Zenith V1\venv\Lib\site-packages\uvicorn\server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\prude\OneDrive\Área de Trabalho\Zenith V1\venv\Lib\site-packages\uvicorn\server.py", line 70, in serve
+    await self._serve(sockets)
+  File "C:\Users\prude\OneDrive\Área de Trabalho\Zenith V1\venv\Lib\site-packages\uvicorn\server.py", line 77, in _serve
+    config.load()
+  File "C:\Users\prude\OneDrive\Área de Trabalho\Zenith V1\venv\Lib\site-packages\uvicorn\config.py", line 435, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\prude\OneDrive\Área de Trabalho\Zenith V1\venv\Lib\site-packages\uvicorn\importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\prude\OneDrive\Área de Trabalho\Zenith V1\services\auth\server.py", line 135, in <module>
+    @app.post("/login", response_model=Token)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\prude\OneDrive\Área de Trabalho\Zenith V1\venv\Lib\site-packages\fastapi\routing.py", line 994, in decorator
+    self.add_api_route(
+  File "C:\Users\prude\OneDrive\Área de Trabalho\Zenith V1\venv\Lib\site-packages\fastapi\routing.py", line 933, in add_api_route
+    route = route_class(
+            ^^^^^^^^^^^^
+  File "C:\Users\prude\OneDrive\Área de Trabalho\Zenith V1\venv\Lib\site-packages\fastapi\routing.py", line 554, in __init__
+    self.dependant = get_dependant(path=self.path_format, call=self.endpoint)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\prude\OneDrive\Área de Trabalho\Zenith V1\venv\Lib\site-packages\fastapi\dependencies\utils.py", line 292, in get_dependant
+    sub_dependant = get_param_sub_dependant(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\prude\OneDrive\Área de Trabalho\Zenith V1\venv\Lib\site-packages\fastapi\dependencies\utils.py", line 126, in get_param_sub_dependant
+    return get_sub_dependant(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\prude\OneDrive\Área de Trabalho\Zenith V1\venv\Lib\site-packages\fastapi\dependencies\utils.py", line 162, in get_sub_dependant
+    sub_dependant = get_dependant(
+                    ^^^^^^^^^^^^^^
+  File "C:\Users\prude\OneDrive\Área de Trabalho\Zenith V1\venv\Lib\site-packages\fastapi\dependencies\utils.py", line 285, in get_dependant
+    param_details = analyze_param(
+                    ^^^^^^^^^^^^^^
+  File "C:\Users\prude\OneDrive\Área de Trabalho\Zenith V1\venv\Lib\site-packages\fastapi\dependencies\utils.py", line 482, in analyze_param
+    ensure_multipart_is_installed()
+  File "C:\Users\prude\OneDrive\Área de Trabalho\Zenith V1\venv\Lib\site-packages\fastapi\dependencies\utils.py", line 115, in ensure_multipart_is_installed
+    raise RuntimeError(multipart_not_installed_error) from None
+RuntimeError: Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+INFO:     Started server process [19180]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8002 (Press CTRL+C to quit)
+INFO:     127.0.0.1:59116 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59116 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+Carregando variáveis de ambiente de: C:\Users\prude\OneDrive\Área de Trabalho\Zenith V1\.env
+Iniciando Serviço de Autenticação na porta 8000...
+Iniciando Orquestrador Principal na porta 8001...
+Iniciando Roteador de LLM na porta 8002...
+Iniciando Sistema RAG na porta 8003...
+Iniciando API de Conectores na porta 8004...
+
+Todos os serviços iniciados. Pressione Ctrl+C para encerrar.
+
+Encerrando todos os serviços...
+Encerrando Serviço de Autenticação...
+Encerrando Orquestrador Principal...
+Encerrando Roteador de LLM...
+Encerrando Sistema RAG...
+Encerrando API de Conectores...
+
+Encerrando todos os serviços...
+Encerrando Serviço de Autenticação...
+Encerrando Orquestrador Principal...
+Encerrando Roteador de LLM...
+Encerrando Sistema RAG...
+Encerrando API de Conectores...
